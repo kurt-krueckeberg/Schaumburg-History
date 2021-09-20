@@ -1,0 +1,1 @@
+Change the top-level menu of "Geschichte Schaumburg" and insert the English text to the History pages and change the "lang=de" to "land=en"

@@ -1,0 +1,29 @@
+/* simple */
+
+body {
+margin: 0;
+padding: 10px;
+background: #fff;
+font-family: verdana, arial, helvetica, sans-serif;
+}
+h1 {
+font-size: 14px;
+}
+a:link , a:visited {
+text-decoration: underline;
+color: #e2615c;
+}
+a:hover {
+text-decoration: none;
+color: #666;
+}
+a:active {
+text-decoration: underline;
+color: #666;
+}
+img {
+display: block;
+}
+.hideold {
+display: none;
+}

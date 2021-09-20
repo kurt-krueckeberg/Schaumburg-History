@@ -1,0 +1,1264 @@
+/*****************************************************
+dateiweite Einstellungen
+*****************************************************/
+
+body
+{
+	margin: 			0;
+	padding:			0;
+	background-color: 		#FFFFFF;	
+	color: 				#666666;
+	font-family: 			Trebuchet MS, Arial, Helvetica, Sans-Serif;
+	text-align:			center;		/* zentrieren für IE */	
+}
+
+
+/*--------------------------------------------
+ Links
+ --------------------------------------------*/
+
+a:link, a:active, a:visited
+{
+	text-decoration: 		none;
+	color: 				#666666;
+	font-weight:			normal;
+}
+
+a:hover
+{
+	text-decoration:		underline;
+}
+
+/*--------------------------------------------
+ Überschriften
+ --------------------------------------------*/
+
+h1 , h2 , h3 , h4 , h5 , h6 
+{
+	margin: 		0;
+	padding:	 	0;
+	font-weight: 		bold;
+	color: 			#666666;
+	font-size: 		small;
+	voice-family: 		"\"}\"";
+	voice-family: 		inherit;
+}
+
+html>h1 , h2 , h3 , h4 , h5 , h6 
+{
+	font-size: 		small;
+}
+
+
+.path
+{
+	font-size:		small;
+	font-weight:		bold;
+	color:			#333333;
+}
+
+
+
+/*--------------------------------------------
+ Formularfelder
+ --------------------------------------------*/
+
+input.button
+{ 
+	margin: 			0; 
+	border-width:			0; 
+	cursor: 			pointer; 
+	font-family: 			Trebuchet MS, Arial, Helvetica, Sans-Serif; 
+	font-size: 			small; 
+	font-weight:			bold;
+	color: 				#1D5FA2;
+	background-color: 		#CCCCCC;
+	border:				1px solid #1D5FA2;
+}
+	
+input.button_small
+{ 
+	margin: 			0; 
+	border-width:			0; 
+	cursor: 			pointer; 
+	font-family: 			Trebuchet MS, Arial, Helvetica, Sans-Serif; 
+	font-weight:			bold;
+	font-size:			x-small;
+	color: 				#1D5FA2;
+	background-color: 		#CCCCCC;
+	border:				1px solid #1D5FA2;
+}
+
+select.input_small,
+option.input_small
+{
+	font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif;
+	color: #1D5FA2;
+	height: 19px;
+	font-size: x-small;
+	background-color: #CCCCCC;
+	border: 1px solid #1D5FA2;
+}
+
+option.input_small
+{
+	font-size: x-small;
+
+	border-top:none;
+}
+
+input.text,
+textarea,
+select
+{
+	margin: 			0;
+	padding: 			2px;
+	border-width: 			0;
+	font-family: 			Trebuchet MS, Arial, Helvetica, Sans-Serif;
+	font-size: 			small;
+	font-weight:			bold;
+
+	color: 				#666666;
+	background-color: 		#FFFFFF;
+	border:				1px solid #1D5FA2;
+}
+
+
+/*--------------------------------------------
+ float + clear
+ --------------------------------------------*/
+	
+.fl 
+{
+	float: 				left;
+	padding: 			0;
+	margin: 			0;
+}
+
+.fr 
+{
+	float: 				right;
+	padding:	 		0;
+	margin:				0;
+}
+
+.cl 
+{
+	clear:	 			left;
+}
+
+.cr 
+{
+	clear: 				right;
+}
+
+.cb 
+{
+	clear: 				both;
+}
+
+
+/*--------------------------------------------
+ Schatten
+ --------------------------------------------*/
+ 
+ #shadow
+ {
+ 	margin:				0;
+ 	padding:			0;
+ 	width: 				776px;  			/* Breite page_container + Breite Schatten-Grafik */
+ }
+ 
+ 
+.shR 
+{
+	background: 			transparent url(sh_right.html) right repeat-y;
+	margin:				0;
+	padding: 			0;
+	text-align: 			left;
+}
+
+.shRT 
+{
+	background: 			transparent url(sh_right_top.html) top right no-repeat;
+	margin: 			0;
+	padding: 			0;
+}
+
+.shB 
+{
+	background: 			transparent url(sh_bottom.html) bottom repeat-x;
+	margin: 			0;
+	padding: 			0;
+}
+
+.shL 
+{
+	background: 			transparent url(sh_left.html) left repeat-y;
+	margin: 			0;
+	padding: 			0;
+}
+
+.shLB 
+{
+	background: 			transparent url(sh_left_bottom.html) left bottom no-repeat;
+	margin: 			0;
+	padding: 			0;
+}
+
+.shRB 
+{
+	background: 			transparent url(sh_right_bottom.html) right bottom no-repeat;
+	margin: 			0;
+	padding: 			0 0 10px 0;
+}
+
+/*-------------------------------------------------------
+	Hintergrundbild gesamtes Browserfenster 
+	auf gleicher Höhe mit head_container nur wenn kein top_container,
+	sonst oben transparent/in Hintergrundfarbe in Höhe des top_container 
+-------------------------------------------------------*/
+
+#bg_top					
+{
+	background-color:		transparent;
+	margin:				0;
+	padding:			0;
+}
+
+/*****************************************************
+Container um die gesamte Seite
+
+beinhaltet main_container (_twocol oder _threecol), 
+top_container (optional), bottom_container (optional)
+*****************************************************/
+
+#page_container
+{
+        margin:			1px auto;
+						/* horizontal=auto -> zentrieren für Mozilla 
+						vertikal -> Abstand vom oberen Rand */
+	width: 			999px;
+	font-size: 		small;
+	vertical-align:		top;
+}
+
+/*==================================================
+Container um den gesamten Seiteinhalt
+===================================================
+mehrere mögliche main_container (entweder/oder), da wegen farbiger Hintergründe
+der Spalten unterschiedliche wrapper benötigt werden
+--------------------------------------------------*/
+
+/*--------------------------------------------------
+Container für zwei Spalten
+
+beinhaltet head_container, site_container, 
+foot_container (optional), headline_container (optional)
+--------------------------------------------------*/
+
+#main_container_twocol
+{
+	margin-right:		0;				/* margin-right, Breite der Schattengrafik 
+								0 wenn kein Schatten */ 
+	background-color:	transparent;
+	background-image:	url(wrapper_twocol.gif);
+	background-repeat:	repeat-y;
+	border-left: 		0px solid #1C5769;
+	border-right:	 	0px solid #1C5769;
+	border-top:		0px solid #1C5769;
+	border-bottom: 		0px solid #1C5769;
+	width:			999px;				/* wenn border um 'main_container_twocol', 
+											   dann um Gesamt-Breite der border schmaler als 'page_container' */
+}
+
+
+
+/*--------------------------------------------------
+Container für drei Spalten
+--------------------------------------------------*/
+
+#main_container_threecol
+{
+	margin-right:		0;				/* margin-right, Breite der Schattengrafik 
+												0 wenn kein Schatten */
+	background-image: 	url(wrapper_threecol.gif);
+	background-repeat: 	repeat-y;
+	border-left:		0px solid #FFFFFF;
+	border-right:		0px solid #FFFFFF;
+	width:			999px;				/* wenn border um 'main_container_threecol', 
+											   dann um Gesamt-Breite der border schmaler als 'page_container' */
+	
+}
+
+/*==================================================
+Container unter dem main_container
+==================================================*/
+
+#foot_container_twocol							/* optional */
+{
+	margin:			0;
+	padding:		0;
+	width:			999px;
+	height:			60px;
+	background-image:	url(foot_wrapper_twocol.gif);
+	background-repeat:	no-repeat;
+}
+
+#foot_container_threecol							/* optional */
+{
+	margin:			0;
+	padding:		0;
+	width:			999px;
+	height:			60px;
+	background-image:	url(foot_wrapper_threecol.gif);
+	background-repeat:	no-repeat;
+}
+
+#foot_container_link
+{
+	margin:			0;
+	padding-left:		36px;
+	padding-top:		16px;
+	width:			130px;
+	height:			40px;
+	float:			left;
+}
+
+
+#bottom_container							/* optional */
+{
+	margin:			0;
+	padding:		0;
+	background-image: 	url(bottom_wrapper.gif);
+	background-repeat: 	no-repeat;
+	color:			#666666;
+	width:			999px;
+	height:			50px;
+	float:			left;
+}
+
+#bottom_container_content
+{
+	padding-top:		10px;
+
+	text-align:		center;
+	font-size:		x-small;
+}
+
+
+/*****************************************************
+Standard: 
+drei Container innerhalb der Seite (vertikal)
+*****************************************************/
+
+#head_container	
+{	
+	margin:			0;
+	height: 		140px;
+	background-image: 	url(header.gif);
+	background-repeat: 	no-repeat;
+	background-color:	transparent;
+	color:			#666666;
+	text-align:		right;
+}
+
+#image_map
+{
+	margin:			0;
+	padding-left:		201px;
+	padding-top:		16px;
+	width:			599px;
+	height:			76px;
+	float:			left;
+}
+
+#head_container_content
+{
+	padding-top:		35px;
+	padding-right:		35px;
+	font-size:		11px;
+	font-weight:		bold;
+}
+
+/*--------------------------------------------------
+Site_Container 
+
+beinhaltet menue_container, content_container (_twocol oder _threecol),
+right_container (optional)
+
+margin + padding unbedingt 0px; (wegen Mozilla/IE Unterschiede) 
+--> im Inhalt festlegen
+--------------------------------------------------*/
+
+#site_container	
+{
+	margin: 		0;
+	padding:	 	0;
+	border-left:		0px solid #FFFFFF;
+	border-right:		0px solid #FFFFFF;
+	width:			999px;
+}
+
+/*==================================================
+zusätzlicher vierter Container (z.B. geteiltes Menü):
+-> nach 'head_container' einfügen
+==================================================*/
+
+#headline_container							/* optional */
+{
+	padding: 		0;
+	height:			36px;
+	background-color:	#CCCCCC;
+	color:			#666666;
+	text-align: 		left;
+	border-bottom:		1px solid #FFFFFF;
+}
+
+#headline_container_content							
+{
+	padding: 		0;
+	padding-top:		9px;
+	padding-left:		224px;
+	font-size:		14px;
+	font-weight:		bold;
+}
+
+#headline_container_content a
+{
+	padding:		0 15px 0 15px;
+	color:			#666666;
+	font-weight:		bold;
+	text-decoration:	none;
+	background-image:	url(li_off_mainmenu.gif);
+	background-position:	0 3px;
+	background-repeat:	no-repeat;
+	text-decoration:	none;
+}
+
+#headline_container_content a:hover
+{
+	padding:		0 15px 0 15px;
+	color:			#1D5690;
+	text-decoration:	none;
+	background-image:	url(li_on_mainmenu.gif);
+	background-position:	0 3px;
+	background-repeat:	no-repeat;
+}
+
+#headline_container_content a.on
+{
+	padding:		0 15px 0 15px;
+	color:			#1D5690;
+	text-decoration:	none;
+	background-image:	url(li_on_mainmenu.gif);
+	background-position:	0 3px;
+	background-repeat:	no-repeat;
+}
+
+/*****************************************************
+innerhalb des 'site'-Containers: verschiedene Möglichkeiten
+*****************************************************/
+
+/*==================================================
+immer da, der Menü-Container (links)
+------------------------------------
+Hier nur Breite verändern !!!
+
+margin + padding unbedingt 0px; (wegen Mozilla/IE Unterschiede) 
+--> im Inhalt festlegen
+==================================================*/
+
+#menue_container	
+{
+	margin: 			0;
+	margin-top:			1px;
+	padding: 			0;
+	padding-bottom:			100px;
+	width: 				200px; 
+	background-color:		#EFEFEF;
+	text-align: 			left;
+	float: 				left;
+}
+
+/*==================================================
+zwei Spalten -> ein Content-Container
+-------------------------------------
+Hier nur Breite verändern !!!
+
+margin + padding unbedingt 0px; (wegen Mozilla/IE Unterschiede) 
+--> im Inhalt festlegen
+==================================================*/
+
+#content_container_twocol
+{
+	margin: 			0;
+	padding:			0;
+	width: 				799px;			/* Breite für Mozilla */
+								/*----------------------------------------------*/
+								/* Breite für IE6 befindet sich in ie_6.css !!! */
+								/*----------------------------------------------*/
+	text-align: 			left;
+	float: 				left;
+}
+
+#content_container_threecol
+{
+	margin: 			0;
+	padding: 			0;
+	width: 				599px;			/* Breite für Mozilla */
+								/*----------------------------------------------*/
+								/* Breite für IE6 befindet sich in ie_6.css !!! */
+								/*----------------------------------------------*/
+	text-align: 			left;
+	float: 				left;
+}
+
+#top_image
+{
+	margin-left:			1px;
+	margin-right:			1px;
+	padding:			0;
+}
+
+#right_container		
+{
+	background-color:		transparent;
+	width: 				200px;
+	text-align: 			left;
+	float: 				right;
+}
+
+#content_right							/* hier margin + padding festlegen */
+{
+	margin: 			0;
+	padding: 			30px;
+	padding-top:			165px;
+	border: 			none;
+}
+
+* html #right_frame
+{
+	padding-bottom:			0;
+}
+
+/****************************************************
+Menü Inhalt
+****************************************************/
+
+#menue								/* hier margin + padding festlegen */
+{
+	margin: 		0;
+	padding:	 	30px 20px 0 20px;
+}
+
+
+/* 1. EBENE */
+
+#menue ul 
+{
+	margin:			0;
+	padding:		0;
+	list-style-type:	none;
+	background-color:	transparent;
+}
+
+#menue ul li 
+{
+	margin:			0;
+	padding:		5px 0 5px 0;
+}
+
+#menue ul li a 
+{
+	margin:			0;
+	padding:		0;
+	padding-left:		15px;
+	background-color:	transparent;
+	color:			#666666;
+	text-decoration:	none;
+	font-weight: 		normal;
+	background-image:	url(li_off.gif);
+	background-position: 	0 5px;
+	background-repeat:	no-repeat;
+	display:		block;
+}
+
+#menue ul li a:hover
+{
+	color:			#1D5690;
+	text-decoration: 	none;
+	background-image:	url(li_on.gif);
+	background-position: 	0 5px;
+	background-repeat:	no-repeat;
+}
+
+#menue ul li a.on
+{
+	color:			#1D5690;
+	text-decoration: 	none;
+	background-image:	url(li_on.gif);
+	background-position: 	0 5px;
+	background-repeat:	no-repeat;
+}
+
+#menue ul li a.on:hover
+{
+	color:			#1D5690;
+	text-decoration: 	none;
+	background-image:	url(li_on.gif);
+	background-position: 	0 5px;
+	background-repeat:	no-repeat;
+}
+
+
+/* 2. EBENE */
+
+#menue ul li ul 
+{
+	margin:			0;
+	padding:		0;
+	padding-left:		15px;
+	background-color:	transparent;
+	border-bottom:		none;
+}
+
+#menue ul li ul li
+{
+
+	margin:			0;
+	padding:		3px 0 3px 0;
+	background-color:	transparent;
+	border-bottom:		none;				/* siehe oben: hier wird nur die geerbte border-bottom entfernt */	
+	background-image:	url(transparent.gif);
+	background-repeat: 	no-repeat;
+	background-position:   	bottom;	
+}
+
+
+#menue ul li ul li a
+{
+	margin:			0;				/* Abstand der Listen-Grafik vom linken Rand des Menüs */
+	padding:		0;
+	padding-left:		15px;
+	background-color:	transparent;
+	background-image:	url(li_off.gif);
+	background-position:	0 5px;
+	background-repeat:	no-repeat;
+	display:		block;
+}
+
+#menue ul li ul li a:hover
+{
+	font-weight:		normal;
+	color:			#1D5690;
+	background-color:	transparent;
+	background-image:	url(li_on.gif);
+	background-position:	0 5px;
+	background-repeat:	no-repeat;
+}
+
+#menue ul li ul li a.on
+{
+	font-weight:		normal;
+	color:			#1D5690;
+	background-color:	transparent;
+	background-image:	url(li_on.gif);
+	background-position:	0 5px;
+	background-repeat:	no-repeat;
+}
+
+#menue ul li ul li a.on:hover
+{
+	font-weight:		normal;
+	color:			#1D5690;
+	background-color:	transparent;
+	background-image:	url(li_on.gif);
+	background-position:	0 5px;
+	background-repeat:	no-repeat;
+}
+
+
+/* 3. EBENE */
+
+#menue ul li ul li ul
+{
+	margin:			0;
+	padding:		0;
+	background-color:	transparent;
+	border-bottom:		none;
+}
+
+#menue ul li ul li ul li
+{
+
+	margin:			0;
+	padding:		6px 0 3px 15px;
+	background-color:	transparent;
+	border-bottom:		none;				/* siehe oben: hier wird nur die geerbte border-bottom entfernt */	
+	background-image:	url(transparent.gif);
+	background-repeat: 	no-repeat;
+	background-position:   	bottom;	
+}
+
+
+#menue ul li ul li ul li a
+{
+	margin:			0;				/* Abstand der Listen-Grafik vom linken Rand des Menüs */
+	padding:		0;
+	padding-left:		15px;
+	background-color:	transparent;
+	background-image:	url(li_off.gif);
+	background-position:	1px 5px;
+	background-repeat:	no-repeat;
+	display:		block;
+}
+
+#menue ul li ul li ul li a:hover
+{
+	font-weight:		normal;
+	color:			#767676;
+	background-color:	transparent;
+	background-image:	url(li_on.gif);
+	background-position:	1px 5px;
+	background-repeat:	no-repeat;
+}
+
+#menue ul li ul li ul li a.on
+{
+	font-weight:		normal;
+	color:			#767676;
+	background-color:	transparent;
+	background-image:	url(li_on.gif);
+	background-position:	1px 5px;
+	background-repeat:	no-repeat;
+}
+
+#menue ul li ul li ul li a.on:hover
+{
+	font-weight:		normal;
+	color:			#767676;
+	background-color:	transparent;
+	background-image:	url(li_on.gif);
+	background-position:	1px 5px;
+	background-repeat:	no-repeat;
+}
+
+
+/* 4. EBENE */
+
+#menue ul li ul li ul li ul 
+{
+	margin:				0;
+	padding:			0;	
+}
+
+#menue ul li ul li ul li ul li
+{
+	margin:				0;
+	padding:			0;
+	border-bottom:		0px solid #000000;	/* siehe oben: hier wird nur die geerbte border entfernt */	
+}
+
+#menue ul li ul li ul li ul li a
+{
+	margin-left: 		41px;				/* Abstand der Listen-Grafik vom linken Rand des Menüs */
+	padding: 			0;
+	padding-left: 		13px;				/* Abstand der Schrift vom linken Rand der Listen-Grafik */
+	border-top: 		none;
+	background-image:	url(li_off.gif); 
+	background-position:0 7px;				/* Position der Listen-Grafik (links oben): 
+											   links sollte immer 0 sein, 
+											   oben an Grafik-Größe anpassbar */
+	background-repeat:	no-repeat;	
+	font-weight: 		normal;
+}
+
+#menue ul li ul li ul li ul li a:hover
+{
+	background-image:	url(li_on.gif); 
+	background-position:0 7px;				/* Position der Listen-Grafik (links oben): 
+											   links sollte immer 0 sein, 
+											   oben an Grafik-Größe anpassbar */
+	background-repeat:	no-repeat;
+}
+
+#menue ul li ul li ul li ul li a.on
+{
+	background-image:	url(li_on.gif); 
+	background-position:0 7px;				/* Position der Listen-Grafik (links oben): 
+											   links sollte immer 0 sein, 
+											   oben an Grafik-Größe anpassbar */
+	background-repeat:	no-repeat;	
+}
+
+#menue ul li ul li ul li ul li a.on:hover
+{
+	background-image:	url(li_on.gif); 
+	background-position:0 7px;				/* Position der Listen-Grafik (links oben): 
+											   links sollte immer 0 sein, 
+											   oben an Grafik-Größe anpassbar */
+	background-repeat:	no-repeat;
+}
+
+
+/* 5. EBENE */
+
+#menue ul li ul li ul li ul li ul 
+{
+	margin:				0;
+	padding:			0;
+}
+
+#menue ul li ul li ul li ul li ul li
+{
+	margin:				0;
+	padding:			0;
+	border-bottom:		0px solid #000000;	/* siehe oben: hier wird nur die geerbte border entfernt */	
+}
+
+#menue ul li ul li ul li ul li ul li a
+{
+	margin-left: 		54px;				/* Abstand der Listen-Grafik vom linken Rand des Menüs */
+	padding: 			0;
+	padding-left: 		13px;				/* Abstand der Schrift vom linken Rand der Listen-Grafik */
+	border-top: 		none;
+	background-image:	url(li_off.gif); 
+	background-position:0 7px;				/* Position der Listen-Grafik (links oben): 
+											   links sollte immer 0 sein, 
+											   oben an Grafik-Größe anpassbar */
+	background-repeat:	no-repeat;
+	font-weight: 		normal;
+}
+
+#menue ul li ul li ul li ul li ul li a:hover
+{
+	background-image:	url(li_on.gif); 
+	background-position:0 7px;				/* Position der Listen-Grafik (links oben): 
+											   links sollte immer 0 sein, 
+											   oben an Grafik-Größe anpassbar */
+	background-repeat:	no-repeat;
+}
+
+#menue ul li ul li ul li ul li ul li a.on
+{
+	background-image:	url(li_on.gif); 
+	background-position:0 7px;				/* Position der Listen-Grafik (links oben): 
+											   links sollte immer 0 sein, 
+											   oben an Grafik-Größe anpassbar */
+	background-repeat:	no-repeat;	
+}
+
+#menue ul li ul li ul li ul li ul li a.on:hover
+{
+	background-image:	url(li_on.gif); 
+	background-position:0 7px;				/* Position der Listen-Grafik (links oben): 
+											   links sollte immer 0 sein, 
+											   oben an Grafik-Größe anpassbar */
+	background-repeat:	no-repeat;	
+}
+
+
+/* 6. EBENE */
+
+#menue ul li ul li ul li ul li ul li ul 
+{
+	margin:				0;
+	padding:			0;	
+}
+
+#menue ul li ul li ul li ul li ul li ul li
+{
+	margin:				0;
+	padding:			0;
+	border-bottom:		0px solid #000000;	/* siehe oben: hier wird nur die geerbte border entfernt */	
+}
+
+#menue ul li ul li ul li ul li ul li ul li a
+{
+	margin-left: 		67px;				/* Abstand der Listen-Grafik vom linken Rand des Menüs */
+	padding: 			0;
+	padding-left: 		13px;				/* Abstand der Schrift vom linken Rand der Listen-Grafik */
+	border-top: 		none;
+	background-image:	url(li_off.gif); 
+	background-position:0 7px;				/* Position der Listen-Grafik (links oben): 
+											   links sollte immer 0 sein, 
+											   oben an Grafik-Größe anpassbar */
+	background-repeat:	no-repeat;	
+	font-weight: 		normal;
+}
+
+#menue ul li ul li ul li ul li ul li ul li a:hover
+{
+	background-image:	url(li_on.gif); 
+	background-position:0 7px;				/* Position der Listen-Grafik (links oben): 
+											   links sollte immer 0 sein, 
+											   oben an Grafik-Größe anpassbar */
+	background-repeat:	no-repeat;
+}
+
+#menue ul li ul li ul li ul li ul li ul li a.on
+{
+	background-image:	url(li_on.gif); 
+	background-position:0 7px;				/* Position der Listen-Grafik (links oben): 
+											   links sollte immer 0 sein, 
+											   oben an Grafik-Größe anpassbar */
+	background-repeat:	no-repeat;	
+}
+
+#menue ul li ul li ul li ul li ul li ul li a.on:hover
+{
+	background-image:	url(li_on.gif); 
+	background-position:0 7px;				/* Position der Listen-Grafik (links oben): 
+											   links sollte immer 0 sein, 
+											   oben an Grafik-Größe anpassbar */
+	background-repeat:	no-repeat;	
+}
+
+/****************************************************
+Content Inhalt
+****************************************************/
+
+#adresse
+{
+	padding-left:		50px;
+	padding-top:		40px;
+	color:				#195A9B;
+	font-weight:		bold;
+	font-size: 			xx-small;
+	voice-family: 		"\"}\"";
+	voice-family: 		inherit;
+	font-size: 			x-small;
+}
+
+html>#adresse
+{
+	font-size: 			x-small;
+}
+
+
+/****************************************************
+Content Inhalt
+****************************************************/
+
+#content									/* hier margin + padding festlegen */
+{
+	margin: 			0;
+	padding: 			37px 40px 15px 40px;
+}
+
+#content p
+{
+	margin: 			0;
+	padding:	 		0;
+}
+
+#print
+{
+	margin:				0;
+
+	padding:			0 0 15px 40px;
+}
+
+#print a
+{
+	background-image:		url(print.gif);
+	background-position:		0 3px;
+	background-repeat:		no-repeat;
+	padding-left:			20px;
+	font-size:			x-small;
+	text-decoration:		underline;
+}
+
+.headline
+{
+	margin: 			0;
+	padding: 			5px;
+	border: 			none;
+	background-color: 		#030F85;
+	color: 				#FFFFFF;
+}
+
+.text
+{
+	margin: 			0;
+	padding: 			5px;
+	border: 			none;
+	background-color: 		#FFFFFF;
+	color: 				#000000;
+}
+
+.small
+{
+	font-size:			x-small;
+	voice-family: 			inherit;
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	Klassen der einzelnen Provider
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.provider				/* border nur zu testzwecken, margin ist abstand zwischen den einzelnen providern */
+{
+	margin:				0;
+	margin-bottom:			15px;
+	padding:			0;
+	padding-bottom:			1px;
+	overflow: 			auto;	
+	border:				none;
+}
+
+/****************************************************
+Beitrag
+****************************************************/
+
+.beitrag_il		/* image links */
+{
+	margin:				0;
+	padding:			0;
+	padding-top:			3px;
+	padding-right:			10px;
+	border:				none;
+	float:				left;
+}
+
+.beitrag_ir		/* image rechts */
+{
+	margin:				0;
+	padding:			0;
+	padding-top:			3px;
+	padding-left:			10px;
+	border:				none;
+	float:				right;	
+}
+
+/****************************************************
+News
+****************************************************/
+
+.news_date
+{
+	font-size:			small;
+}
+
+/*---------------------------------------
+News Liste
+---------------------------------------*/
+
+.newslist_item
+{
+	margin:				0;
+	padding-bottom:			1px;
+	overflow: 			auto;	
+	border:				none;
+}
+
+.newslist_il		/* image links */
+{
+	margin:				0;
+	padding:			0;
+	padding-right:			10px;
+	/*border:			1px solid #00FF00;*/	
+	border:				none;
+	float:				left;	
+}
+
+.newslist_ir		/* image rechts */
+{
+	margin:				0;
+	padding:			0;	
+	padding-left:			10px;
+	/*border:			1px solid #00FF00;*/
+	border:				none;	
+	float:				right;
+}
+
+.newslist_trenner
+{
+	margin:				0;
+	margin-top:			15px;				/* Abstand über dem trenner */
+	padding:			0;
+	border-top:			1px solid #1D5FA2;
+	height:				15px;				/* Abstand unter dem trenner */
+	background: 			transparent;
+	clear:				both;
+}
+
+.verzeichnislist_trenner
+{
+	margin:				0;
+	margin-top:			10px;				
+	margin-bottom:			10px;				
+	padding:			0;
+	border-top:			1px solid #1D5FA2;
+	background: 			transparent;
+	clear:				both;
+}
+
+/*---------------------------------------
+News Vollansicht
+---------------------------------------*/
+
+.news_il		/* image links */
+{
+	margin:				0;
+	padding:			0;
+	padding-top:			3px;
+	padding-right:			10px;
+	border:				none;	
+	float:				left;
+}
+
+.news_ir		/* image rechts */
+{
+	margin:				0;
+	padding:			0;
+	padding-top:			3px;
+	padding-left:			10px;
+	border:				none;
+	float:				right;
+}
+
+/****************************************************
+Newsticker
+****************************************************/
+
+#ticker form
+{
+	margin:				0; 
+	padding:			0; 
+	display:			inline;
+}
+
+#ticker input
+{
+	border:				1px solid #1D5FA2; 
+	width:				100%; 
+	background-color:		#FFFFFF; 
+	font-family:			Trebuchet MS, Arial, Helvetica;
+	font-size:			small; 
+	color:				#666666;
+}
+
+/****************************************************
+Termine
+****************************************************/
+
+.termin_box_title
+{
+	margin:				0;
+	padding:			3px 5px 3px 5px;
+	background-color:		#151C4A;
+	color:				#FFFFFF;
+	font-weight:			bold;
+}
+
+.termin_box
+{
+	/*margin:			0;*/
+	padding:			5px;
+	border:				1px solid #151C4A;
+	background-color:		#FFFFFF;
+	color:				#151C4A;
+}
+
+.termin_month
+{
+	margin-bottom:		2px;
+	font-weight:		bold;
+}
+
+.termin_date
+{
+	background-color:	#B2BFD0;
+}
+
+.terminlist_trenner
+{
+	margin:				0;
+	margin-top:			15px;
+	margin-bottom:			15px;
+	padding:			0;
+	border-top:			1px solid #14649F;
+	background: 			transparent;
+	clear:				both;
+}
+
+
+/****************************************************
+Suche
+****************************************************/
+
+#suche
+{
+	height:			62px;
+	margin:			0;
+	padding:		0;
+}
+
+.input_search
+{
+	margin:			0;
+	margin-top:		15px;
+	margin-bottom:		5px;
+	width:			130px;
+	color:			#666666;
+	border:			none;
+	border-left:		1px solid #000000;
+	border-bottom:		1px solid #000000;
+}
+
+.button_search
+{
+}
+
+/*---------------------------------------
+Suche Result
+---------------------------------------*/
+
+.result_box
+{
+	border:				1px solid #0072BB;
+}
+
+.result_title
+{
+	background-color:		#0072BB;
+	color:				#FFFFFF;
+}
+
+a.result_link
+{
+	color:				#FFFFFF; 
+	font-weight:			bold; 
+	text-decoration:		none;
+}
+
+
+/****************************************************
+Liste
+****************************************************/
+
+#liste ul
+{
+	margin:				0;
+	margin-top:			5px;
+	padding:			10px 0 0 15px;
+	list-style-type:		disc;		
+}
+
+#liste ul li
+{
+	margin:				0;
+	margin-bottom:			15px;
+	padding:			0;
+	line-height:			140%;
+}
+
+#liste ul li p {
+	margin:				0px;
+	padding:			0px;
+}

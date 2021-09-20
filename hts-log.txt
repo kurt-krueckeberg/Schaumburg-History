@@ -1,0 +1,28 @@
+HTTrack3.49-2+libhtsjava.so.2 launched on Sun, 19 Sep 2021 15:16:40 at https://www.histag-schaumburg.de/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/*
+(webhttrack -q -%i -w https://www.histag-schaumburg.de/ -O "/home/kurt/websites/Schaumburg History" -n -%P -N0 -s2 -p7 -D -a -K0 -c4 -%k -A25000 -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -%s -%u )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:34:27	Warning: 	HTML file (20734 bytes) retransferred due to lack of cache: https://www.histag-schaumburg.de/page/page_ID/114/action/112/page/1?PHPSESSID=dcc0c2d7871efe7114b39027ce525895
+15:34:28	Warning: 	HTML file (30598 bytes) retransferred due to lack of cache: https://www.histag-schaumburg.de/page/page_ID/115/action/114/page/1?PHPSESSID=dcc0c2d7871efe7114b39027ce525895
+15:34:30	Warning: 	HTML file (6850 bytes) retransferred due to lack of cache: https://www.histag-schaumburg.de/page/page_ID/95?PHPSESSID=ad90c510046f52a367ff7d903947eb09
+15:34:32	Warning: 	HTML file (14692 bytes) retransferred due to lack of cache: https://www.histag-schaumburg.de/page/page_ID/147/action/117/page/1?PHPSESSID=dcc0c2d7871efe7114b39027ce525895
+15:34:33	Warning: 	HTML file (11993 bytes) retransferred due to lack of cache: https://www.histag-schaumburg.de/page/page_ID/148/action/118/page/1?PHPSESSID=dcc0c2d7871efe7114b39027ce525895
+15:34:35	Warning: 	HTML file (7085 bytes) retransferred due to lack of cache: https://www.histag-schaumburg.de/page/page_ID/118?PHPSESSID=ad90c510046f52a367ff7d903947eb09
+15:34:36	Warning: 	HTML file (7085 bytes) retransferred due to lack of cache: https://www.histag-schaumburg.de/page/page_ID/118?PHPSESSID=b938b189956f74e97f56d5a25cc7405c
+15:34:38	Warning: 	HTML file (20734 bytes) retransferred due to lack of cache: https://www.histag-schaumburg.de/page/page_ID/114/action/112/page/1?PHPSESSID=ad90c510046f52a367ff7d903947eb09
+15:34:39	Warning: 	HTML file (20734 bytes) retransferred due to lack of cache: https://www.histag-schaumburg.de/page/page_ID/114/action/112/page/1?PHPSESSID=b938b189956f74e97f56d5a25cc7405c
+15:34:41	Warning: 	HTML file (7085 bytes) retransferred due to lack of cache: https://www.histag-schaumburg.de/page/page_ID/118?PHPSESSID=987b35cecd72cf1f8e792479cc1be463
+15:34:43	Warning: 	HTML file (20734 bytes) retransferred due to lack of cache: https://www.histag-schaumburg.de/page/page_ID/114/action/112/page/1?PHPSESSID=987b35cecd72cf1f8e792479cc1be463
+15:34:44	Error: 	"Not Found" (404) at link https://www.histag-schaumburg.de/data/sh_right.gif (from https://www.histag-schaumburg.de/data/style.css)
+15:34:44	Error: 	"Not Found" (404) at link https://www.histag-schaumburg.de/data/sh_right_top.gif (from https://www.histag-schaumburg.de/data/style.css)
+15:34:44	Error: 	"Not Found" (404) at link https://www.histag-schaumburg.de/data/sh_bottom.gif (from https://www.histag-schaumburg.de/data/style.css)
+15:34:44	Error: 	"Not Found" (404) at link https://www.histag-schaumburg.de/data/sh_left.gif (from https://www.histag-schaumburg.de/data/style.css)
+15:34:44	Error: 	"Not Found" (404) at link https://www.histag-schaumburg.de/data/sh_left_bottom.gif (from https://www.histag-schaumburg.de/data/style.css)
+15:34:44	Error: 	"Not Found" (404) at link https://www.histag-schaumburg.de/data/sh_right_bottom.gif (from https://www.histag-schaumburg.de/data/style.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 18 minutes 4 seconds : 913 links scanned, 917 files written (36147671 bytes overall) [32929866 bytes received at 30378 bytes/sec], 5206971 bytes transferred using HTTP compression in 651 files, ratio 30%, 20.7 requests per connection
+(6 errors, 11 warnings, 0 messages)
